@@ -1,0 +1,2026 @@
+@charset "utf-8";
+//main
+#main {
+    background: #f6f6f6;
+    padding: 1px 0 40px 0;
+}
+/*--- 度假  --- */
+#travel {
+    width: 1180px;
+    margin: 28px auto 0;
+    .travel-title {
+        position: relative;
+        height: 36px;
+        border-bottom: 2px solid #3983e5;
+        ul li {
+            float: left;
+            height: 36px;
+            line-height: 30px;
+            color: #333;
+            font-size: 16px;
+            margin-right: 30px;
+            cursor: pointer;    
+            &:nth-of-type(1){
+                position: relative;
+                color: #06c;
+                cursor: default;
+                i {
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0px;
+                    margin-left: -6px;
+                    height: 0;
+                    width: 0;
+                    border: 6px solid transparent;
+                    border-bottom-color: #3983e5;
+                }
+            }
+            &:hover {
+                color: #06c;
+            }
+
+        }
+
+
+        >div {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 22px;
+            line-height: 22px;
+            
+            a {
+                padding: 1px 22px 0 0;
+                display: inline-block;
+                height: 22px;
+                color: #3983e4;
+                i {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transition: transform 0.1s;
+                    height: 0;
+                    width: 0;
+                    border: 5px solid transparent;
+                    border-top-color: #3983e5;
+                    
+                }
+                &:hover i {
+                    transform: rotate(180deg) translateY(5px) ;
+                    /* TODO: 二级菜单效果 */
+
+                }
+            };
+
+        }
+    
+    }
+    .travel-content {
+        height: 375px;
+        padding: 15px 19px 0;
+        border: 1px solid #ccc;
+        border-top: none;
+        background: #fff;
+        &-title ul {
+            height: 20px;
+            margin-bottom: 10px;
+            li{
+                float:left;
+                line-height: 20px;
+                margin-right: 15px;
+                padding: 0 8px;
+                border-radius: 3px;
+                &:hover {
+                    background: #3983e5;
+                    a {
+                        color: #fff;
+                    }
+                }
+                a {
+                    color: #3983e5;
+                }
+                &:nth-of-type(1) {
+                    background: #3983e5;
+                    a {
+                        color: #fff;
+                        cursor: default;
+                    }
+                }
+
+            }
+        }
+        &-main {
+            height: 330px;
+            li {
+                position: relative;
+                float: left;
+                margin: 0 0 10px 10px;
+                height: 330px;
+                &:nth-of-type(1) {
+                    margin-left: 0px;
+                }
+                >a {
+                    display: block;
+                    color: #fff;
+                    img {
+                        height: 330px;
+                    }
+                    >p {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        background: rgba(0,0,0,.4);
+                        border-radius: 0 0 10px 0;
+                        
+                        span {
+                            display: inline-block;
+                            border-radius: 0 0 10px 0;
+                            height: 20px;
+                            line-height: 20px;
+                            padding: 0 11px 0 6px;
+                            color: #fff;
+                            
+                            &:nth-of-type(1){
+                                background: #FF6913;
+                            }
+
+                        }
+                        
+                    
+                    }
+
+                    .items-ball {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        margin:-56px 0 0 -51px;
+                        width: 102px;
+                        height: 52px;
+                        background: rgba(0, 0, 0, 0.5);
+                        border-radius: 50%;
+                        padding: 30px 5px;
+                        text-align: center;
+                        >p {
+                            font: 700 18px/1.2 "Microsoft yahei";
+                        }
+                        
+                        >div {
+                            margin-top: 4px;
+                            border-top: 1px solid rgba(255, 255, 255, 0.5);
+                            height: 35px;
+                            padding: 0 5px;
+                            i{
+                                vertical-align: 7px;
+                            }
+                            b {
+                                margin-left: -5px;
+                                font: 22px/1.5 tahoma;
+                                color: #f60;
+                            }
+                            em {
+                                vertical-align: 2px;
+                            }
+
+                        }
+                    }
+
+                    .bgchange {
+                        position: absolute;
+                        padding: 65px 10px 10px;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        background: rgba(0,0,0,0.50);
+                        font-family: PingFangSC-Regular;
+                        line-height: 16px;
+                        display: none;
+                        .title {
+                            text-align: center;
+                            font-size: 22px;
+                            line-height: 18px;
+                            font-weight: bold;
+                            margin-bottom: 40px;
+                        }
+                        .info {
+                            position: relative;
+                            padding-left: 28px;
+                            margin-bottom: 20px;
+                            line-height: 16px;
+                            height: 32px;
+                            overflow: hidden;
+                            white-space: normal;
+                            text-overflow: -o-ellipsis-lastline;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                        }
+                        .link {
+                            margin-top: 40px;
+                            text-align: center;
+                        }
+                    }
+
+                    &:hover .bgchange {
+                        display: block;
+                    }
+                    &:hover .items-ball {
+                        display: none;  
+                    }
+                    &:hover >p {
+                        display: none;  
+                    }
+                }
+                
+            }
+        }
+    }
+ 
+}
+/*--- /度假  --- */
+
+/*--- 酒店 --- */
+#hotel {
+    width: 1180px;
+    margin: 28px auto 0;
+    .hotel-title {
+        position: relative;
+        height: 36px;
+        border-bottom: 2px solid #3983e5;
+        ul li {
+            float: left;
+            height: 36px;
+            line-height: 30px;
+            color: #333;
+            font-size: 16px;
+            margin-right: 30px;
+            cursor: pointer;    
+            &:nth-of-type(1){
+                position: relative;
+                color: #06c;
+                cursor: default;
+                i {
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0px;
+                    margin-left: -6px;
+                    height: 0;
+                    width: 0;
+                    border: 6px solid transparent;
+                    border-bottom-color: #3983e5;
+                }
+            }
+            &:hover {
+                color: #06c;
+            }
+
+        }
+
+
+        >div {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 22px;
+            line-height: 22px;
+            
+            a {
+                padding: 1px 22px 0 0;
+                display: inline-block;
+                height: 22px;
+                color: #3983e4;
+                i {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transition: transform 0.1s;
+                    height: 0;
+                    width: 0;
+                    border: 5px solid transparent;
+                    border-top-color: #3983e5;
+                    
+                }
+                &:hover i {
+                    transform: rotate(180deg) translateY(5px) ;
+                    /* TODO: 二级菜单效果 */
+
+                }
+            };
+
+        }
+    
+    }
+    .hotel-content {
+        border: 1px solid #ccc;
+        border-top: none;
+        background: #fff;
+        .content-left {
+            float: left;
+            width: 187px;
+            height: 360px;
+            padding: 0 20px 15px;
+            overflow: hidden;
+            dl {
+                margin: 0px 0 7px 0;
+                overflow: hidden;
+                dt {
+                    padding: 4px 0 0 0;
+                    font: 700 14px/34px "Microsoft yahei";
+                }
+                dd {
+                    display: block;
+                    a {
+                        display: block;
+                        width: 187px;
+                        color: #666;
+                        // border-left: 1px solid #ececec;
+                        line-height: 18px;
+                        height: 18px;
+                        padding: 7px 0px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        &:hover {
+                            color: #3983e6;
+                        }
+                    }
+                }
+            }
+        }
+        .content-right{
+            float: left;
+            height: 375px;
+            padding: 15px 19px 0;
+            border-left: 1px dotted #a3a3a3;
+            .hotel-content-title {
+                position: relative;
+                ul{
+                    float: left;
+                    height: 20px;
+                    margin-bottom: 10px;
+                    
+                    li{
+                        float:left;
+                        line-height: 20px;
+                        margin-right: 15px;
+                        padding: 0 8px;
+                        border-radius: 3px;
+                        &:hover {
+                            background: #3983e5;
+                            a {
+                                color: #fff;
+                            }
+                        }
+                        a {
+                            color: #3983e5;
+                        }
+                        &:nth-of-type(1) {
+                            background: #3983e5;
+                            a {
+                                color: #fff;
+                                cursor: default;
+                            }
+                        }
+        
+                    }
+                }
+
+                >a {
+                    position: absolute;
+                    right: 9px;
+                    top: 0px;
+                    display: block;
+                    color: #3983e5;
+                    &:hover {
+                        right: -2px;
+                        top: -3px;
+                        border: 1px solid #3983e5;
+                        border-radius: 3px;
+                        padding: 2px 10px;
+                    }
+                    i {
+                        font-size: 16px;
+                    }
+                }
+    
+
+            }
+            .hotel-content-main {
+                ul {
+                    float: left;
+                    width: 690px;
+                    li {
+                        position: relative;
+                        float: left;
+                        margin: 0 10px 10px 0;
+                        height: 160px;
+                        width: 220px;
+                        overflow: hidden;
+                        &:hover >a img {
+                            transform: scale(1.05);
+                        }
+                        &:hover >a .items-ball {
+                            background: rgba(0, 0, 0, 0.7);
+                        }
+        
+        
+                        &:nth-of-type(1) {
+                            margin-left: 0px;
+                            >a .items-ball{
+                                background: rgba(0, 0, 0, 0.7);
+                            }
+                        }
+                        >a {
+                            display: block;
+                            color: #fff;
+                            img {
+                                width: 220px;
+                                transition: transform 0.3s ease 0s;
+                            }
+        
+                            .items-ball {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                margin:-56px 0 0 -51px;
+                                width: 102px;
+                                height: 52px;
+                                background: rgba(0, 0, 0, 0.5);
+                                border-radius: 50%;
+                                padding: 30px 5px;
+                                text-align: center;
+                                transition: all 0.3s;
+                                >p {
+                                    font: 700 18px/1.2 "Microsoft yahei";
+                                }
+                                
+                                >div {
+                                    margin-top: 4px;
+                                    border-top: 1px solid rgba(255, 255, 255, 0.5);
+                                    height: 35px;
+                                    padding: 0 5px;
+                                    i{
+                                        vertical-align: 7px;
+                                    }
+                                    b {
+                                        margin-left: -5px;
+                                        font: 22px/1.5 tahoma;
+                                        color: #f60;
+                                    }
+                                    em {
+                                        vertical-align: 2px;
+                                    }
+        
+                                }
+                            }
+        
+                            
+        
+        
+                        }
+                        
+                    }
+                }
+
+                >div {
+                    float: right;
+                    width: 220px;
+                    a {
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+
+
+                    }
+                    p {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 30px;
+                        width: 100%;
+                        background: rgba(0, 0, 0, 0.5);
+                        color: #fff;
+                        text-align: center;
+                        line-height: 30px;
+                    }
+                }
+            }
+
+
+        }
+    }
+  
+ 
+}
+/*--- /酒店  --- */
+
+/*--- 机票 --- */
+#airport {
+    width: 1180px;
+    margin: 28px auto 0;
+    .airport-title {
+        position: relative;
+        height: 36px;
+        border-bottom: 2px solid #3983e5;
+        ul li {
+            float: left;
+            height: 36px;
+            line-height: 30px;
+            color: #333;
+            font-size: 16px;
+            margin-right: 30px;
+            cursor: pointer;    
+            &:nth-of-type(1){
+                position: relative;
+                color: #06c;
+                cursor: default;
+                i {
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0px;
+                    margin-left: -6px;
+                    height: 0;
+                    width: 0;
+                    border: 6px solid transparent;
+                    border-bottom-color: #3983e5;
+                }
+            }
+            &:hover {
+                color: #06c;
+            }
+
+        }
+
+
+        >div {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 22px;
+            line-height: 22px;
+            
+            a {
+                padding: 1px 22px 0 0;
+                display: inline-block;
+                height: 22px;
+                color: #3983e4;
+                i {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transition: transform 0.1s;
+                    height: 0;
+                    width: 0;
+                    border: 5px solid transparent;
+                    border-top-color: #3983e5;
+                    
+                }
+                &:hover i {
+                    transform: rotate(180deg) translateY(5px) ;
+                    /* TODO: 二级菜单效果 */
+
+                }
+            };
+
+        }
+    
+    }
+    .airport-content {
+        height: 383px;
+        padding: 15px 19px 0;
+        border: 1px solid #ccc;
+        border-top: none;
+        background: #fff;
+        &-title {
+            position: relative;
+            ul {
+                height: 20px;
+                margin-bottom: 10px;
+                li{
+                    float:left;
+                    line-height: 20px;
+                    margin-right: 15px;
+                    padding: 0 8px;
+                    border-radius: 3px;
+                    &:hover {
+                        background: #3983e5;
+                        a {
+                            color: #fff;
+                        }
+                    }
+                    a {
+                        color: #3983e5;
+                    }
+                    &:nth-of-type(1) {
+                        background: #3983e5;
+                        a {
+                            color: #fff;
+                            cursor: default;
+                        }
+                    }
+    
+                }
+            }
+            >a {
+                position: absolute;
+                right: 9px;
+                top: 0px;
+                display: block;
+                color: #3983e5;
+                &:hover {
+                    right: -2px;
+                    top: -3px;
+                    border: 1px solid #3983e5;
+                    border-radius: 3px;
+                    padding: 2px 10px;
+                }
+                i {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &-main {
+            ul {
+                width: 920px;
+                float: left;
+                li {
+                    float: left;
+                    width: 194px;
+                    height: 74px;
+                    padding: 15px 12px;
+                    margin: 0 10px 10px 0;
+                    background: #f8f8f8;
+                    border: 1px solid #f8f8f8;
+                    cursor: pointer;
+                    &:hover {
+                        box-shadow: 0 1px 4px rgba(0, 0, 0, .25);
+                    }
+                    >a {
+                        display: block;
+                        color: #666;
+                        padding: 0 5px;
+                        >p {
+                            margin-bottom: 3px;
+                            color: #333;
+                            height: 20px;
+                            line-height: 20px;
+
+                        }
+                        >i {
+                            display: inline-block;
+                            height: 27px;
+                        }
+                        >div {
+                            span {
+                                i {
+                                    vertical-align: 6px;
+                                }
+                                em {
+                                    margin-left: -4px;
+                                    font: 22px/1.5 tahoma;
+                                    color: #f60;
+                                }
+                                b {
+                                    vertical-align: 2px;
+                                }
+                            }
+                            strong {
+                                float: right;
+                                height: 27px;
+                                padding: 0 15px;
+                                font: 14px/27px "Microsoft yahei";
+                                margin: 3px 0 0 0;
+                                border-radius: 3px;
+                                background-color: #ffb000;
+                                color: #fff;
+                            }
+                        }
+                    }  
+                }
+            }
+
+            >div {
+                float: right;
+                a {
+                    display: block;
+                }
+            }
+
+        }
+    }
+}
+/*--- /机票 --- */
+
+/*--- 用车 --- */
+#car {
+    width: 1180px;
+    margin: 28px auto 0;
+    .car-title {
+        position: relative;
+        height: 36px;
+        border-bottom: 2px solid #3983e5;
+        ul li {
+            float: left;
+            height: 36px;
+            line-height: 30px;
+            color: #333;
+            font-size: 16px;
+            margin-right: 30px;
+            cursor: pointer;    
+            &:nth-of-type(1){
+                position: relative;
+                color: #06c;
+                cursor: default;
+                i {
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0px;
+                    margin-left: -6px;
+                    height: 0;
+                    width: 0;
+                    border: 6px solid transparent;
+                    border-bottom-color: #3983e5;
+                }
+            }
+            &:hover {
+                color: #06c;
+            }
+
+        }
+
+
+        >div {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 22px;
+            line-height: 22px;
+            
+            a {
+                padding: 1px 22px 0 0;
+                display: inline-block;
+                height: 22px;
+                color: #3983e4;
+                i {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transition: transform 0.1s;
+                    height: 0;
+                    width: 0;
+                    border: 5px solid transparent;
+                    border-top-color: #3983e5;
+                    
+                }
+                &:hover i {
+                    transform: rotate(180deg) translateY(5px) ;
+                    /* TODO: 二级菜单效果 */
+
+                }
+            };
+
+        }
+    
+    }
+    .car-content {
+        border: 1px solid #ccc;
+        border-top: none;
+        background: #fff;
+        .content-left {
+            float: left;
+            width: 187px;
+            height: 205px;
+            padding: 0 20px 15px;
+            overflow: hidden;
+            dl {
+                margin: 0px 0 7px 0;
+                overflow: hidden;
+                dt {
+                    padding: 4px 0 0 0;
+                    font: 700 14px/34px "Microsoft yahei";
+                }
+                dd {
+                    display: block;
+                    margin-left: -10px;
+                    span {
+                        float: left;
+                        display: block;
+                        border-left: 1px solid #ececec;
+                        padding: 0 10px;
+                        line-height: 18px;
+                        height: 18px;
+                        margin: 7px 0;
+                        a {
+                            color: #666;
+                            &:hover {
+                                color: #3983e6;
+                            }
+                        }
+                    }
+
+
+
+
+                }
+            }
+        }
+        .content-right{
+            float: left;
+            height: 205px;
+            padding: 15px 15px 0;
+            border-left: 1px dotted #a3a3a3;
+            .car-content-title {
+                position: relative;
+                ul{
+                    float: left;
+                    height: 20px;
+                    margin-bottom: 10px;
+                    
+                    li{
+                        float:left;
+                        line-height: 20px;
+                        margin-right: 15px;
+                        padding: 0 8px;
+                        border-radius: 3px;
+                        &:hover {
+                            background: #3983e5;
+                            a {
+                                color: #fff;
+                            }
+                        }
+                        a {
+                            color: #3983e5;
+                        }
+                        &:nth-of-type(1) {
+                            background: #3983e5;
+                            a {
+                                color: #fff;
+                                cursor: default;
+                            }
+                        }
+                        &:nth-last-child(1){
+                            padding: 0;
+                            &:hover{
+                                background: none;
+                                a {
+                                    color: #3983e5;
+                                }
+                            }
+                            a {
+                                display: block;
+                                position: relative;
+                                width: 40px;
+                                padding: 1px 5px 0;
+                                i {
+                                    position: absolute;
+                                    top: 50%;
+                                    margin-top: -2.5px;
+                                    margin-left: 5px;
+                                    height: 0px;
+                                    width: 0px;
+                                    border: 5px solid transparent;
+                                    border-top-color: #3983e4;
+                                }
+                            }
+
+
+
+
+                        }
+        
+                    }
+                }
+
+                >a {
+                    position: absolute;
+                    right: 9px;
+                    top: 0px;
+                    display: block;
+                    color: #3983e5;
+                    &:hover {
+                        right: -2px;
+                        top: -3px;
+                        border: 1px solid #3983e5;
+                        border-radius: 3px;
+                        padding: 2px 10px;
+                    }
+                    i {
+                        font-size: 16px;
+                    }
+                }
+    
+
+            }
+            .car-content-main {
+                ul {
+                    
+                    li {
+                        position: relative;
+                        float: left;
+                        height: 200px;
+                        width: 220px;
+                        margin: 0 0 10px 10px;
+                        transition: all .2s linear;
+
+
+                        a{
+                            &:hover img {
+                                transform: scale(1.05);
+                            }
+                            &:hover {
+                                box-shadow: 0 1px 4px rgba(0, 0, 0, .25);
+                            }
+                            overflow: hidden;
+                            color: #666;
+                            display: block;
+                            img {
+                                // position: absolute;
+                                // margin: auto;
+                                // top: 0;
+                                // left: 0;
+                                // right: 0;
+                                // bottom: 0;
+                                width: 220px;
+                                transition: transform 0.3s ease 0s;
+                            }
+                            >p {
+                                height: 20px;
+                                line-height: 20px;
+                                padding: 0 5px;
+                            }
+                            >div {
+                                strong {
+                                    color: #999;
+                                    line-height: 35px;
+                                }
+                                span {
+                                    float: right;
+                                    i{
+                                        vertical-align: 7px;
+                                    }
+                                    b {
+                                        margin-left: -5px;
+                                        font: 22px/1.5 tahoma;
+                                        color: #f60;
+                                    }
+                                    em {
+                                        vertical-align: 2px;
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+            }
+
+
+        }
+    }
+  
+ 
+}
+/*--- /用车 --- */
+
+/*--- 购物 --- */
+#shopping {
+    width: 1180px;
+    margin: 28px auto 0;
+    .shopping-title {
+        position: relative;
+        height: 36px;
+        border-bottom: 2px solid #3983e5;
+        ul li {
+            float: left;
+            height: 36px;
+            line-height: 30px;
+            color: #333;
+            font-size: 16px;
+            margin-right: 30px;
+            cursor: pointer;    
+            &:nth-of-type(1){
+                position: relative;
+                color: #06c;
+                cursor: default;
+                i {
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0px;
+                    margin-left: -6px;
+                    height: 0;
+                    width: 0;
+                    border: 6px solid transparent;
+                    border-bottom-color: #3983e5;
+                }
+            }
+            &:hover {
+                color: #06c;
+            }
+
+        }
+
+
+        >div {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 22px;
+            line-height: 22px;
+            
+            a {
+                padding: 1px 22px 0 0;
+                display: inline-block;
+                height: 22px;
+                color: #3983e4;
+                i {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transition: transform 0.1s;
+                    height: 0;
+                    width: 0;
+                    border: 5px solid transparent;
+                    border-top-color: #3983e5;
+                    
+                }
+                &:hover i {
+                    transform: rotate(180deg) translateY(5px) ;
+                    /* TODO: 二级菜单效果 */
+
+                }
+            };
+
+        }
+    
+    }
+    .shopping-content {
+        border: 1px solid #ccc;
+        border-top: none;
+        background: #fff;
+        .content-left {
+            float: left;
+            width: 187px;
+            height: 205px;
+            padding: 0 20px 15px;
+            overflow: hidden;
+            dl {
+                margin: 0px 0 7px 0;
+                overflow: hidden;
+                dt {
+                    padding: 4px 0 0 0;
+                    font: 700 14px/34px "Microsoft yahei";
+                }
+                dd {
+                    display: block;
+                    margin-left: -10px;
+                    span {
+                        float: left;
+                        display: block;
+                        border-left: 1px solid #ececec;
+                        padding: 0 10px;
+                        line-height: 18px;
+                        height: 18px;
+                        margin: 7px 0;
+                        a {
+                            color: #666;
+                            &:hover {
+                                color: #3983e6;
+                            }
+                        }
+                    }
+
+
+
+
+                }
+            }
+        }
+        .content-right{
+            float: left;
+            height: 205px;
+            padding: 15px 15px 0;
+            border-left: 1px dotted #a3a3a3;
+            .shopping-content-title {
+                position: relative;
+                ul{
+                    float: left;
+                    height: 20px;
+                    margin-bottom: 10px;
+                    
+                    li{
+                        float:left;
+                        line-height: 20px;
+                        margin-right: 15px;
+                        padding: 0 8px;
+                        border-radius: 3px;
+                        &:hover {
+                            background: #3983e5;
+                            a {
+                                color: #fff;
+                            }
+                        }
+                        a {
+                            color: #3983e5;
+                        }
+                        &:nth-of-type(1) {
+                            background: #3983e5;
+                            a {
+                                color: #fff;
+                                cursor: default;
+                            }
+                        }
+        
+                    }
+                }
+
+                >a {
+                    position: absolute;
+                    right: 9px;
+                    top: 0px;
+                    display: block;
+                    color: #3983e5;
+                    &:hover {
+                        right: -2px;
+                        top: -3px;
+                        border: 1px solid #3983e5;
+                        border-radius: 3px;
+                        padding: 2px 10px;
+                    }
+                    i {
+                        font-size: 16px;
+                    }
+                }
+    
+
+            }
+            .shopping-content-main {
+                ul {
+                    
+                    li {
+                        position: relative;
+                        float: left;
+                        height: 200px;
+                        width: 220px;
+                        margin: 0 0 10px 10px;
+                        transition: all .2s linear;
+
+
+                        a{
+                            &:hover img {
+                                transform: scale(1.05);
+                            }
+                            &:hover {
+                                box-shadow: 0 1px 4px rgba(0, 0, 0, .25);
+                            }
+                            overflow: hidden;
+                            color: #666;
+                            display: block;
+                            img {
+
+                                width: 220px;
+                                transition: transform 0.3s ease 0s;
+                            }
+                            >p {
+                                height: 20px;
+                                line-height: 20px;
+                                padding: 0 5px;
+                            }
+                            >div {
+                                strong {
+                                    color: #999;
+                                    line-height: 35px;
+                                }
+                                span {
+                                    float: right;
+                                    i{
+                                        vertical-align: 7px;
+                                    }
+                                    b {
+                                        margin-left: -5px;
+                                        font: 22px/1.5 tahoma;
+                                        color: #f60;
+                                    }
+                                    em {
+                                        vertical-align: 2px;
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+            }
+
+
+        }
+    }
+  
+ 
+}
+/*--- /购物 --- */
+
+/*--- 攻略 --- */
+#guide {
+    width: 1180px;
+    margin: 28px auto 0;
+    .guide-title {
+        position: relative;
+        height: 36px;
+        border-bottom: 2px solid #3983e5;
+        ul li {
+            float: left;
+            height: 36px;
+            line-height: 30px;
+            color: #333;
+            font-size: 16px;
+            margin-right: 30px;
+            cursor: pointer;    
+            &:nth-of-type(1){
+                position: relative;
+                color: #06c;
+                cursor: default;
+                i {
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0px;
+                    margin-left: -6px;
+                    height: 0;
+                    width: 0;
+                    border: 6px solid transparent;
+                    border-bottom-color: #3983e5;
+                }
+            }
+            &:hover {
+                color: #06c;
+            }
+
+        }
+
+
+        >div {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 22px;
+            line-height: 22px;
+            
+            a {
+                padding: 1px 22px 0 0;
+                display: inline-block;
+                height: 22px;
+                color: #3983e4;
+                i {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transition: transform 0.1s;
+                    height: 0;
+                    width: 0;
+                    border: 5px solid transparent;
+                    border-top-color: #3983e5;
+                    
+                }
+                &:hover i {
+                    transform: rotate(180deg) translateY(5px) ;
+                    /* TODO: 二级菜单效果 */
+
+                }
+            };
+
+        }
+    
+    }
+    .guide-content {
+        border: 1px solid #ccc;
+        border-top: none;
+        background: #fff;
+        .content-left {
+            float: left;
+            width: 187px;
+            height: 205px;
+            padding: 0 20px 15px;
+            overflow: hidden;
+            dl {
+                margin: 0px 0 7px 0;
+                overflow: hidden;
+                dt {
+                    padding: 4px 0 0 0;
+                    font: 700 14px/34px "Microsoft yahei";
+                }
+                dd {
+                    display: block;
+                    line-height: 18px;
+                    height: 18px;
+                    padding: 7px 0;
+
+                    a {
+                        color: #666;
+                        &:hover {
+                            color: #3983e6;
+                        }
+                    }
+
+                }
+            }
+        }
+        .content-right{
+            float: left;
+            height: 205px;
+            padding: 15px 15px 0;
+            border-left: 1px dotted #a3a3a3;
+            .guide-content-title {
+                position: relative;
+                ul{
+                    float: left;
+                    height: 20px;
+                    margin-bottom: 10px;
+                    
+                    li{
+                        float:left;
+                        line-height: 20px;
+                        margin-right: 15px;
+                        padding: 0 8px;
+                        border-radius: 3px;
+                        &:hover {
+                            background: #3983e5;
+                            a {
+                                color: #fff;
+                            }
+                        }
+                        a {
+                            color: #3983e5;
+                        }
+                        &:nth-of-type(1) {
+                            background: #3983e5;
+                            a {
+                                color: #fff;
+                                cursor: default;
+                            }
+                        }
+        
+                    }
+                }
+
+                >a {
+                    position: absolute;
+                    right: 9px;
+                    top: 0px;
+                    display: block;
+                    color: #3983e5;
+                    &:hover {
+                        right: -2px;
+                        top: -3px;
+                        border: 1px solid #3983e5;
+                        border-radius: 3px;
+                        padding: 2px 10px;
+                    }
+                    i {
+                        font-size: 16px;
+                    }
+                }
+    
+
+            }
+            .guide-content-main {
+                ul {
+                    
+                    li {
+                        position: relative;
+                        float: left;
+                        width: 220px;
+                        margin: 0 0 10px 10px;
+
+                        a{
+                            &:hover img {
+                                transform: scale(1.05);
+                            }
+                            &:hover >P {
+                                height:35px;
+                            }
+                            overflow: hidden;
+                            color: #666;
+                            display: block;
+                            img {
+                                width: 220px;
+                                height: 155px;
+                                transition: transform 0.3s ease 0s;
+                            }
+                            >p {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 20px;
+                                line-height: 20px;  
+                                text-align: center;
+                                padding: 5px 0;
+                                color: #fff;
+                                background: rgba(0, 0, 0, 0.5);
+                                transition: all 0.3s ease 0s;
+                            }
+
+                        }
+                    }
+                }
+
+            }
+
+
+        }
+    }
+  
+ 
+}
+/*--- /攻略 --- */
+
+/*--- 旅行服务 --- */
+.trip {
+    width: 1180px;
+    margin: 28px auto 0;
+    &-title {
+        position: relative;
+        height: 36px;
+        border-bottom: 2px solid #3983e5;
+        ul li {
+            float: left;
+            height: 36px;
+            line-height: 30px;
+            color: #333;
+            font-size: 16px;
+            margin-right: 30px;
+            cursor: pointer;    
+            &:nth-of-type(1){
+                position: relative;
+                color: #06c;
+                cursor: default;
+                i {
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0px;
+                    margin-left: -6px;
+                    height: 0;
+                    width: 0;
+                    border: 6px solid transparent;
+                    border-bottom-color: #3983e5;
+                }
+            }
+            &:hover {
+                color: #06c;
+            }
+
+        }
+    }
+    &-content {
+        
+        >ul {
+            >li {
+                float: left;
+                border: 1px solid #e0e0e0;
+                margin: 10px 0 0 10px;
+                background: #fff;
+                &:nth-of-type(1) {
+                    margin-left: 0;
+                }
+                >a {
+                    display: block;
+                    height: 117px;
+                    border-bottom: 1px solid #e0e0e0;
+                    &:hover {
+                        background: #e2eeff;
+                    }
+                    strong {
+                        position: relative;
+                        display: inline-block;
+                        margin: 15px 10px 0 30px;
+                        height: 70px;
+                        width: 70px;
+                        text-align: center;
+                        border-radius: 50%;
+                        background: #abcdf5;
+                        i {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            display: inline-block;
+                            height: 34px;
+                            width: 46px;
+                            background: url(../img/un_index_supply.png) no-repeat 0 0;
+                        }
+                    }
+                    div {
+                        float: right;
+                        margin-top: 15px;
+                        p {
+                            font: 16px/1.5 "Microsoft yahei";
+                            margin-bottom: 5px;
+                            color: #333;
+                        }
+                        em {
+                            display: block;
+                            padding-right: 5px;
+                            color: #666;
+                        }
+                    }
+                }
+                >div {
+                    >ul {
+                        >li {
+                            float: left;
+                            padding: 8px 0;
+                            &:hover {
+                                background: #e2edff;
+                                cursor: pointer;
+                            }
+                            &:nth-of-type(1) a{
+                                border-left: none;
+                            }
+                            a {
+                                display: inline-block;
+                                width: 95px;
+                                height: 24px;
+                                line-height: 24px;
+                                border-left: 1px dashed #a3a3a3;
+                                text-align: center;
+                                color: #333;
+                                img {
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    margin-right: 5px;
+                                    width: 24px;
+                                    height: 24px;
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+/*--- /旅行服务 --- */
+
+/*--- 商旅服务 --- */
+.business {
+    width: 1180px;
+    margin: 28px auto 0;
+    &-title {
+        position: relative;
+        height: 36px;
+        border-bottom: 2px solid #3983e5;
+        ul li {
+            float: left;
+            height: 36px;
+            line-height: 30px;
+            color: #333;
+            font-size: 16px;
+            margin-right: 30px;
+            cursor: pointer;    
+            &:nth-of-type(1){
+                position: relative;
+                color: #06c;
+                cursor: default;
+                i {
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0px;
+                    margin-left: -6px;
+                    height: 0;
+                    width: 0;
+                    border: 6px solid transparent;
+                    border-bottom-color: #3983e5;
+                }
+            }
+            &:hover {
+                color: #06c;
+            }
+
+        }
+    }
+    &-content {
+        >ul {
+            >li {
+                width: 384px;
+                float: left;
+                border: 1px solid #e0e0e0;
+                margin: 10px 0 0 10px;
+                background: #fff;
+                &:nth-of-type(1) {
+                    margin-left: 0;
+                }
+                >a {
+                    display: block;
+                    height: 117px;
+                    border-bottom: 1px solid #e0e0e0;
+                    &:hover {
+                        background: #e2eeff;
+                    }
+                    strong {
+                        float: left;
+                        position: relative;
+                        display: block;
+                        margin: 15px 10px 0 30px;
+                        height: 70px;
+                        width: 70px;
+                        text-align: center;
+                        border-radius: 50%;
+                        background: #F8c2b3;
+                        i {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            display: inline-block;
+                            height: 34px;
+                            width: 46px;
+                            background: url(../img/un_index_supply.png) no-repeat 0 0;
+                        }
+                    }
+                    div {
+                        float: right;
+                        width: 254px;
+                        margin-top: 15px;
+                        p {
+                            font: 16px/1.5 "Microsoft yahei";
+                            margin-bottom: 5px;
+                            color: #333;
+                        }
+                        em {
+                            display: block;
+                            padding-right: 5px;
+                            color: #666;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+}
+/*--- /商旅服务 --- */
+
+/*--- 合作优惠 --- */
+.discount {
+    width: 1180px;
+    margin: 28px auto 0;
+    background: #fff;
+    &-top {
+        height: 98px;
+        border: 1px solid #e0e0e0;
+        box-sizing: border-box;
+        &-left {
+            float: left;
+            width: 189px;
+            height: 88px;
+            border-right: 1px solid #e0e0e0;
+            box-sizing: border-box;
+            padding: 10px 10px 0 20px;
+            >p {
+                position: relative;
+                margin-bottom: 5px;
+                font: 16px/26px "Microsoft YaHei", SimSun, Tahoma, Verdana, Arial, sans-serif;
+                a {
+                    position: absolute;
+                    right: 0;
+                    color: #b6b6b6;
+                    font: 12px/26px 'SimSun';
+                    &:hover {
+                        color: #3983e5;
+                    }
+                }
+            }
+            >div {
+                a {
+                    display: block;
+                    font-size: 12px;
+                    font-family: 'simsun';
+                    color: #666;
+                    &:hover {
+                        color: #3983e5;
+                    }
+                }
+            }
+        }
+        &-right {
+            float: left;
+            padding: 10px 10px 0 20px;
+            height: 88px;
+            >p {
+                font: 16px/26px "Microsoft YaHei", SimSun, Tahoma, Verdana, Arial, sans-serif;
+                margin-bottom: 5px;
+            }
+            >div {
+                ul {
+                    li {
+                        float: left;
+                        width: 154px;
+                        border-left: 1px dashed #e0e0e0;
+                        text-align: center;
+                        &:nth-of-type(1) {
+                            border-left: none;
+                        }
+                        a {
+                            display: inline-block;
+                            width: 76px;
+                            height: 28px;
+                            background: url(../img/pic_partner.png) no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-bot {
+        padding: 10px 15px;
+        line-height: 2;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        a {
+            color: #b6b6b6;
+        }
+        dl {
+            display: block;
+            overflow: hidden;
+            padding: 5px 0 5px 80px;
+            border-top:  1px dotted #ccc;
+            &:nth-of-type(1) {
+                border-top: none;
+            }
+            dt {
+                float: left;
+                width: 80px;
+                margin-left: -80px;
+                font-size: 12px;
+                font-weight: bold;
+                color: #666;
+            }
+            dd {
+                float: left;
+                width: 84px;
+                margin-right: 5px;
+                a {
+                   &:hover {
+                        color: #3983e5;
+                   } 
+                }
+            }
+        }
+    }
+    .language {
+        width: auto;
+        a {
+            &:hover i{
+                background-position: -43px 0;
+            }
+        }
+        i {
+            display: inline-block;
+            vertical-align: middle;
+            width: 20px;
+            height: 16px;
+            background:url(../img/un_footer201807.png) no-repeat -64px 0;
+
+        }
+        b {
+            display: inline-block;
+            margin-top: 4px;
+            vertical-align: middle;
+            height: 0;
+            width: 0;
+            border: 4px solid transparent;
+            border-top-color: #000;
+        }
+    }
+}
+/*--- /合作优惠 --- */
+
+/*--- footer--- */
+.footer {
+    width: 1180px;
+    margin: 28px auto 0;
+    &-top {
+        margin: 28px auto; 
+        >dl {
+            float: left;
+            width: 235px;
+            height: 150px;
+            padding-left: 10px;
+            color: #666;
+
+            dt {
+                font: 16px/20px 'Microsoft yahei';
+                margin-bottom: 10px;
+            }
+            dd {
+                &:nth-of-type(2) a {
+                    i {
+                        background-position: -41px -200px;
+                    }
+                    p {
+                        color: #ff9913;
+                    }
+
+                }
+
+                a {
+                    color: #666;
+                    display: block;
+                    padding-bottom: 15px;
+                    i {
+                        display: inline-block;
+                        width: 36px;
+                        height: 36px;
+                        background: url(../img/pic_partner.png) no-repeat -41px -250px;
+                    }
+                    div {
+                        display: inline-block;
+                        margin-left: 9px;
+                        p {
+                            color: #2577e3;
+                            font: bold 16px "Microsoft Yahei";
+                        }
+                    }
+
+                }
+
+
+            }
+
+        } 
+        >div {
+            float: left;
+        
+            dl{
+                float: left;
+                width: 210px;
+                height: 150px;
+                padding: 0 10px 0 40px;
+                border-left: 1px solid #dedede;
+                &:nth-of-type(3) {
+                    padding-right: 0;
+                }
+                &:nth-of-type(4) {
+                    padding: 0 0 0 30px;
+                    width: 130px;
+                }
+                dt {
+                    font: 16px/20px 'Microsoft yahei';
+                    margin-bottom: 10px;
+                }
+                dd {
+                    display: inline-block;
+                    width: 103px;
+                    line-height: 14px;
+                    margin: 6px 0;
+                    a {
+                        color: #666;
+                        &:hover {
+                            color: #3983e5;
+                        }
+                    }
+                }
+
+            }
+            .hot {
+                position: relative;
+                a {
+                    &:hover i{
+                        transform:rotate(180deg) translateY(7.5px);
+                    }
+                }
+                i {
+                    position: absolute;
+                    top: 50%;
+                    right: 43px;
+                    transform: translateY(-2px);
+                    display: inline-block;
+                    height: 0;
+                    width: 0;
+                    border: 5px solid transparent;
+                    border-top-color: #3983e4;
+                    transition: transform 0.3s;
+                }
+            }
+
+        }
+        .scan {
+            dt {
+                margin-bottom: 1px;
+                font-size: 12px;
+                text-align: center;
+            }
+            dd {
+                width: 114px;
+                padding: 8px;
+                border: 1px solid #efefef;
+                line-height: 14px;
+                margin: 6px 0;
+                p {
+                    margin-top: 10px;
+                    line-height: 1.3;
+                    color: #999;
+                }
+            }
+        }
+    }
+    &-bot {
+        text-align: center;
+        color: #999;
+        padding-top: 28px;
+        a {
+            display: inline-block;
+            color: #999;
+            &:hover {
+                color: #3983e5;
+            }
+        }
+        p {
+            padding-top: 10px;
+            &:nth-of-type(2) {
+                i {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 3px;
+                    background: url(../img/phone_list20180116.png) no-repeat 0 -235px;
+                }
+            }
+        }
+        >div {
+            padding-top: 10px;
+            a {
+                display: inline-block;
+                margin: 0 4px;
+                width: 88px;
+                height: 32px;
+                background: url(../img/phone_list20180116.png) no-repeat 0 -50px;
+                border: 1px solid #d1d1d1;
+                border-radius: 2px;
+                text-indent: -100%;
+                overflow: hidden;
+
+            }
+        }
+    }
+}
+/*--- /footer--- */
+
+
+/*--- 左侧导航--- */
+.lift {
+    position: fixed;
+    width: 36px;
+    height: 360px;
+    margin: 0 auto;
+    left: 50%;
+    top: 200px;
+    margin-left: -633px;
+    z-index: 20;
+    li {
+        background: url(../img/un_icon_leftnav.png) no-repeat center -40px;
+        position: relative;
+        display: block;
+        width: 36px;
+        height: 40px;
+        line-height: 40px;
+        cursor: pointer;
+        margin-top: -1px;
+        overflow: hidden;
+        margin-bottom: 1px;
+        text-align: center;
+        &:hover {
+            color: #fff;
+            background: #3882e5;
+        }
+        &:hover a{
+            text-decoration: none;
+            color: #fff;
+            padding-top: 0;
+            border-top: none;
+        }
+        a {
+            display: inline-block;
+            height: 39px;
+            border-top: 1px solid #e0e0e0;
+            font-style: normal;
+            padding-top: 45px;
+            overflow: hidden;
+            text-align: center;
+        }
+    }
+
+}
+/*--- /左侧导航--- */
+
+

@@ -1,0 +1,55 @@
+body,h1,h2,h3,ul,ol,dl,dt,input,form,p{margin:0;padding:0}
+li{list-style:none;}
+a{text-decoration:none}
+i,em,p,span,b{font-style:normal;font-weight:normal;}
+
+html{font-size:100px}
+body{font-size:16px}
+html,body{height:100%}
+body{display:flex;flex-direction:column;justify-content:space-between;}
+header{height:3.34rem;background: #fff;}
+
+section{flex:1;overflow: auto;}
+.search{padding-left:0.38rem;height:1.17rem;display:flex;justify-content: space-around;align-items: center;}
+
+.search span img{width:0.37rem;}
+.search form{flex:1;position:relative;padding-left:0.29rem;}
+.search input{height:0.72rem;width:80%;border:0.01rem solid #ccc;
+background:#f7f5f6;border-radius:0.35rem}
+.search label{color:#c3c1c2;position:absolute;left:1.05rem;top:0.12rem;;}
+.search i{color:#c3c1c2;position:absolute;left:0.56rem;top:0.18rem;font-size:0.36rem;}
+header .title{border-bottom:0.01rem solid #ccc;height:1.2rem;padding:0 0.38rem;display: flex;font-weight:900;}
+.title> a{display:flex;bottom:0;width:0.78rem;height:97%;color:#25ba9d;border-bottom:0.08rem solid #25ba9d;justify-content: center;align-items: center;}
+.title ul{display:flex;flex:1;}
+.title ul li{width:25%;height:100%;}
+.title ul li a{font-size:0.34rem;color:#333;width:100%;height:100%;display:flex;justify-content: center;align-items: center;}
+
+.nav ul{display:flex;justify-content: space-between}
+.nav ul li {width:25%}
+.nav ul li a{display:flex;height:1.2rem;width:100%;justify-content: center;align-items: center;font-size:0.33rem;color:#686868;}
+.nav ul li a b{display:flex;width: 0;height:0;border:0.07rem solid transparent;border-top-color:#686868;margin:0.07rem 0 0 0.07rem;}
+
+.banner{height:2.1rem;padding:0.38rem;}
+.banner a{display:flex;height:100%;width:100%;}
+.banner img{width:100%;}
+
+.product{padding:0.38rem;border-bottom:0.01rem solid #ccc;}
+.product p{margin-bottom:0.32rem;font-size:0.34rem;color:#ccc;display:flex;justify-content: space-between;align-items: center}
+
+.product p span i{font-size:0.44rem;}
+.product p em{color:#000;}
+
+.foodinfo{display:flex;justify-content: space-between}
+.foodinfo>a{display:block;}
+.foodinfo>a img{width:2.17rem;}
+.rightinfo{line-height:0.45rem;font-size:0.27rem;color:#ccc;padding-left:0.2rem;}
+
+.rightinfo h3{margin-bottom:0.18rem;color:#d4a136;display:flex;justify-content: space-between;align-items: center;}
+
+.rightinfo h3 a{display:inline-block;width:75%;color:#000;font-size:0.38rem;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.rightinfo>p{color:#000;}
+.rightinfo>strong{display:inline-block;color:#f99813;padding-top:0.2rem;}
+.rightinfo>strong i{font-size:0.46rem;font-weight:900;}
+.rightinfo>strong span{border:0.02rem solid #f99813;margin:0 0.06rem;}
+
+
